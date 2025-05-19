@@ -1,0 +1,42 @@
+﻿<div class="row">
+    @foreach (var movie in Movies)
+    {
+        <div class="col-md-3 mb-4">
+            <div class="movie-card">
+                <img src="@movie.ImageUrl" alt="@movie.Title" class="movie-image" />
+                <div class="movie-info">
+                    <span class="movie-year">@movie.Year</span>
+                    <h5 class="movie-title">@movie.Title</h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Movie> Movies { get; set; } = new List<Movie>
+    {
+        new Movie { Title = "A Minecraft Movie", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Warfare", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "A Working Man", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Snow White", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Final Destination: Bloodlines", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Last Bullet", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Thunderbolts*", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Exterritorial", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Bambi: A Life in the Woods", Year = "2024", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "In the Lost Lands", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Rust", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Death of a Unicorn", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Karate Kid: Legends", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Havoc", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" },
+        new Movie { Title = "Mission: Impossible - The Final Reckoning", Year = "2025", ImageUrl = "https://via.placeholder.com/200x300" }
+    };
+
+    private class Movie
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Year { get; set; } = string.Empty;
+        public string ImageUrl { get; set; } = string.Empty;
+    }
+}

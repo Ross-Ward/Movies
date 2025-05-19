@@ -1,0 +1,40 @@
+.movie-list-item {
+    background: #2a2a4a;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.movie-rank {
+    color: #00ffcc;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.movie-list-image {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.movie-list-info {
+    flex: 1;
+}
+
+.movie-list-title {
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.movie-list-meta {
+    color: #d3d3d3;
+    font-size: 0.75rem;
+}
+
+.movie-list-hd {
+    background: #ffd700;
+    color: #000;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    font-size: 0.65rem;
+}

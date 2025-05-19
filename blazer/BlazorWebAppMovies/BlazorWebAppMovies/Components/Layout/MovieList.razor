@@ -1,0 +1,38 @@
+﻿<ul class="list-unstyled">
+    @foreach (var movie in MostViewedMovies)
+    {
+        <li class="movie-list-item mb-3 d-flex align-items-center">
+            <span class="movie-rank me-2">@movie.Rank</span>
+            <img src="@movie.ImageUrl" alt="@movie.Title" class="movie-list-image me-2" />
+            <div class="movie-list-info">
+                <h6 class="movie-list-title mb-0">@movie.Title</h6>
+                <span class="movie-list-meta">@movie.Rating / 10 @movie.Year</span>
+                @if (movie.IsHD)
+                {
+                    <span class="movie-list-hd ms-2">HD</span>
+                }
+            </div>
+        </li>
+    }
+</ul>
+
+@code {
+    private List<Movie> MostViewedMovies { get; set; } = new List<Movie>
+    {
+        new Movie { Rank = "#1", Title = "A Minecraft Movie", Rating = "6.4", Year = "2025", ImageUrl = "https://via.placeholder.com/50x75", IsHD = true },
+        new Movie { Rank = "#2", Title = "Warfare", Rating = "7.1", Year = "2025", ImageUrl = "https://via.placeholder.com/50x75", IsHD = true },
+        new Movie { Rank = "#3", Title = "Snow White", Rating = "4.3", Year = "2025", ImageUrl = "https://via.placeholder.com/50x75", IsHD = true },
+        new Movie { Rank = "#4", Title = "Tin Soldier", Rating = "5.4", Year = "2025", ImageUrl = "https://via.placeholder.com/50x75", IsHD = true },
+        new Movie { Rank = "#5", Title = "A Working Man", Rating = "6.5", Year = "2025", ImageUrl = "https://via.placeholder.com/50x75", IsHD = false }
+    };
+
+    private class Movie
+    {
+        public string Rank { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty;
+        public string Rating { get; set; } = string.Empty;
+        public string Year { get; set; } = string.Empty;
+        public string ImageUrl { get; set; } = string.Empty;
+        public bool IsHD { get; set; }
+    }
+}
