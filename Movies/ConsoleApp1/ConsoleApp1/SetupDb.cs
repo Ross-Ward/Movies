@@ -3,11 +3,12 @@ namespace ConsoleApp1;
 public class SetupDb
 {
     private readonly MovieDbContext _dbContext;
+    private readonly RestService _restService;
 
-    public SetupDb(MovieDbContext dbContext)
+    public SetupDb(MovieDbContext dbContext, RestService restService)
     {
         _dbContext = dbContext;
-        
+        _restService = restService;
     }
     public void Setup()
     {
